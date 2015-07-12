@@ -12,14 +12,20 @@ runtime! debian.vim
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set autoindent
 set smartindent
 "set cindent
+
 set background=dark
+
+set history=700
 
 set number
 set numberwidth=5
 
 set hlsearch
+
+set so=7
 
 set wildmenu
 set laststatus=2
@@ -27,7 +33,7 @@ set nocompatible
 " Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
 " options, so any other options should be set AFTER setting 'compatible'.
-"set compatible
+set nocompatible
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
@@ -48,13 +54,18 @@ set nocompatible
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
 set showcmd		" Show (partial) command in status line.
+set cmdheight=2
 set showmatch		" Show matching brackets.
 set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
+
 set hidden		" Hide buffers when they are abandoned
-"set mouse=a		" Enable mouse usage (all modes)
+set mouse=a		" Enable mouse usage (all modes)
+
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l,[,]
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
