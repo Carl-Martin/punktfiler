@@ -18,6 +18,11 @@ set smartindent
 
 set background=dark
 
+imap jj <esc>
+
+" vim beter sig som min vanliga bash med !, (alias)
+"set shellcmdflag=-ic
+
 set history=700
 
 set number
