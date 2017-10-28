@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Help variable
+cd $(echo $0 | sed -E 's:\w+\.sh::')
 equal=1
+
 for file in $(git ls-files ".*"); do
     echo $file
     diff $file "${HOME}/${file}" || equal=0
