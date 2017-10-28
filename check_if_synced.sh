@@ -2,7 +2,7 @@
 
 # Help variable
 equal=1
-for file in $(git ls-files); do
+for file in $(git ls-files ".*"); do
     echo $file
     diff $file "${HOME}/${file}" || equal=0
 done
